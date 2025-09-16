@@ -1,2 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Base */
+  --color-bg: #fdfdfd; /* Background */
+  --color-bg-muted: #f3f4f6; /* Card / subtle background */
+  --color-border: #e5e7eb; /* Borders, dividers */
+
+  /* Text */
+  --color-text: #111111; /* Primary text */
+  --color-text-muted: #4b5563; /* Secondary text / muted labels */
+  --color-text-inverse: #ffffff; /* Text on accent buttons/cards */
+
+  /* Accent (cyan) */
+  --color-accent: #0ea5e9; /* Primary accent */
+  --color-accent-hover: #0284c7; /* Darker cyan for hover */
+  --color-accent-focus: #38bdf8; /* Lighter cyan for focus ring */
+  --color-accent-active: #0369a1; /* Pressed / active state */
+
+  /* Highlight (pink) */
+  --color-highlight: #f472b6; /* Secondary accent */
+  --color-highlight-hover: #ec4899; /* Darker pink for hover */
+  --color-highlight-focus: #f9a8d4; /* Lighter pink for focus ring */
+  --color-highlight-active: #db2777; /* Pressed / active state */
+
+  /* Utility */
+  --color-success: #10b981; /* Success green */
+  --color-warning: #f59e0b; /* Warning amber */
+  --color-error: #ef4444; /* Error red */
+
+  /* Fonts */
+  --font-bitcount: "Bitcount Single", system-ui;
+  --font-roboto: "Roboto Mono", monospace;
+  --font-playfair: "Playfair Display", serif;
+}
+
+.dark {
+    /* Base */
+  --color-bg: #121212;              /* Background */
+  --color-bg-muted: #1F1F1F;        /* Card / subtle background */
+  --color-border: #2D2D2D;          /* Borders, dividers */
+
+  /* Text */
+  --color-text: #E5E5E5;            /* Primary text */
+  --color-text-muted: #9CA3AF;      /* Secondary text / muted labels */
+  --color-text-inverse: #000000;    /* Text on accent buttons/cards */
+
+  /* Accent (cyan) */
+  --color-accent: #38BDF8;          /* Primary accent */
+  --color-accent-hover: #0EA5E9;    /* Darker cyan for hover */
+  --color-accent-focus: #7DD3FC;    /* Lighter cyan for focus ring */
+  --color-accent-active: #0284C7;   /* Pressed / active state */
+
+  /* Highlight (pink) */
+  --color-highlight: #F9A8D4;       /* Secondary accent */
+  --color-highlight-hover: #F472B6; /* Darker pink for hover */
+  --color-highlight-focus: #FBCFE8; /* Lighter pink for focus ring */
+  --color-highlight-active: #EC4899;/* Pressed / active state */
+
+  /* Utility */
+  --color-success: #34D399;         /* Success green */
+  --color-warning: #FBBF24;         /* Warning amber */
+  --color-error: #F87171;           /* Error red */
+}
