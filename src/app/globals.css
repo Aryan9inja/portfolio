@@ -67,3 +67,7 @@
   --color-warning: #FBBF24;         /* Warning amber */
   --color-error: #F87171;           /* Error red */
 }
+
+* {
+  @apply transition-colors duration-300;
+}
