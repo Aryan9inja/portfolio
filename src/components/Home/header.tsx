@@ -3,7 +3,7 @@ import { words } from "./words";
 
 export default function Header() {
   return (
-    <header className="text-text font-playfair flex items-center md:justify-around">
+    <header className="text-text font-playfair flex items-center md:justify-between">
       <div className="w-full md:w-[55%]">
         <p className="text-2xl md:text-4xl mb-1 md:mb-2 font-bold">Hi! 🤟</p>
         <p className="text-4xl md:text-6xl mb-1 md:mb-2">
