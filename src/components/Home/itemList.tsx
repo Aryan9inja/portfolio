@@ -32,7 +32,7 @@ const ItemsBox = ({ logo, name }: Item) => {
       <div className="w-5 h-5 flex items-center justify-center">
         <IconComponent icon={logo} />
       </div>
-      <h1 className="text-sm md:text-2xl font-medium">{name}</h1>
+      <h1 className="text-sm md:text-xl font-medium">{name}</h1>
     </div>
   );
 };
