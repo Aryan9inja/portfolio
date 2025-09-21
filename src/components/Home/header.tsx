@@ -1,5 +1,5 @@
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
-import { words } from "./words";
+import { words, wordsB, wordsC } from "./words";
 
 export default function Header() {
   return (
@@ -14,6 +14,17 @@ export default function Header() {
         <TypewriterEffect
           words={words}
           className="font-bitcount font-semibold text-left md:text-left"
+          cursorClassName="hidden"
+        />
+        <TypewriterEffect
+          words={wordsB}
+          className="font-bitcount font-semibold text-left md:text-left"
+          cursorClassName="hidden"
+        />
+        <TypewriterEffect
+          words={wordsC}
+          className="font-bitcount font-semibold text-left md:text-left"
+          cursorClassName="hidden"
         />
       </div>
       <div className="hidden md:block">
