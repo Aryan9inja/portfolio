@@ -1,3 +1,4 @@
+import { Footer } from "@/components/Home/footer";
 import Gradient from "@/components/Home/gradient";
 import Header from "@/components/Home/header";
 import Main from "@/components/Home/main";
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <Gradient/>
       <Main />
+      <Footer/>
     </div>
   );
 }
