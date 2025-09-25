@@ -11,7 +11,7 @@ export default function Navbar() {
 
   const navItems: NavItem[] = [
     { id: "home", href: "/", label: "Home" },
-    { id: "about", href: "#", label: "About" },
+    { id: "about", href: "/about", label: "About" },
     { id: "experience", href: "#", label: "Experience" },
     { id: "projects", href: "#", label: "Projects" },
   ];
