@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import ThemeBtn from "@/components/theme_button";
+import { StaticGridBackground } from "@/components/ui/grid-background-wrapper";
 
 export default function RootLayout({
   children,
@@ -10,16 +11,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-bg p-6">
+      <body>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          <ThemeBtn />
-          <div className="mt-20">{children}</div>
+          <StaticGridBackground />
+          <div className="relative z-10">
+            <Navbar />
+            <ThemeBtn />
+            <div className="mt-15">{children}</div>
+          </div>
         </ThemeProvider>
       </body>
     </html>
