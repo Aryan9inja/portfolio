@@ -38,6 +38,18 @@
   --font-roboto: "Roboto Mono", monospace;
   --font-playfair: "Playfair Display", serif;
 }
+/* Hide scrollbar for all browsers */
+html, body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  overflow: auto;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera, Brave */
+}
 
 .dark {
     /* Base */

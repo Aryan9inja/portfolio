@@ -3,32 +3,30 @@ import { words, wordsB, wordsC } from "./words";
 
 export default function Header() {
   return (
-    <header className="text-text font-playfair flex items-center md:justify-between">
-      <div className="w-full md:w-[55%]">
-        <p className="text-2xl md:text-4xl mb-1 md:mb-2 font-bold">Hi! 🤟</p>
-        <p className="text-4xl md:text-6xl mb-1 md:mb-2">
-          I&apos;m{" "}
-          <span className="text-accent font-semibold font-roboto">Aryan</span>{" "}
-          Singh Thakur
+    <header className="bg-bg-muted/80 rounded-2xl shadow-lg p-6 flex flex-col md:flex-row items-center md:justify-between gap-6">
+      <div className="w-full md:w-[60%] flex flex-col gap-2">
+        <p className="text-2xl md:text-4xl mb-1 font-bold">Hi! <span className="animate-bounce inline-block">🤟</span></p>
+        <p className="text-4xl md:text-6xl mb-2">
+          I&apos;m <span className="text-accent font-semibold font-roboto">Aryan</span> Singh Thakur
         </p>
         <TypewriterEffect
           words={words}
-          className="font-bitcount font-semibold text-left md:text-left"
+          className="font-bitcount font-semibold text-left"
           cursorClassName="hidden"
         />
         <TypewriterEffect
           words={wordsB}
-          className="font-bitcount font-semibold text-left md:text-left"
+          className="font-bitcount font-semibold text-left"
           cursorClassName="hidden"
         />
         <TypewriterEffect
           words={wordsC}
-          className="font-bitcount font-semibold text-left md:text-left"
+          className="font-bitcount font-semibold text-left"
           cursorClassName="hidden"
         />
       </div>
-      <div className="hidden md:block">
-        <img src="/dev.png" />
+      <div className="hidden md:flex items-center justify-center">
+        <img src="/dev.png" alt="Aryan Avatar" className="rounded-full w-44 h-44 object-cover shadow-md border-4 border-accent" />
       </div>
     </header>
   );
