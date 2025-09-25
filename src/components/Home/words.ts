@@ -1,66 +1,22 @@
-const textClass = "text-xl md:text-4xl tracking-tighter";
+const textClass = "text-lg md:text-xl tracking-wide text-highlight";
 
 export const words = [
   {
-    text: "A",
-    className: textClass,
-  },
-  {
-    text: "passionate",
-    className: textClass,
-  },
-  {
-    text: "full",
-    className: textClass,
-  },
-  {
-    text: "stack",
-    className: textClass,
-  },
-  {
-    text: "developer",
+    text: "A passionate full stack developer",
     className: textClass,
   },
 ];
 
 export const wordsB = [
   {
-    text: "An",
-    className: textClass,
-  },
-  {
-    text: "AI",
-    className: textClass,
-  },
-  {
-    text: "-",
-    className: textClass,
-  },
-  {
-    text: "ML",
-    className: textClass,
-  },
-  {
-    text: "enthusiast",
+    text: "An AI-ML enthusiast",
     className: textClass,
   },
 ];
 
-export const wordsC=[
+export const wordsC = [
   {
-    text: "Eat",
+    text: "Eat Sleep Code Repeat",
     className: textClass,
   },
-  {
-    text: "Sleep",
-    className: textClass,
-  },
-  {
-    text: "Code",
-    className: textClass,
-  },
-  {
-    text: "Repeat",
-    className: textClass,
-  },
-]
+];
