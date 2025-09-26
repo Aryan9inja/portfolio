@@ -15,7 +15,7 @@ export default function ThemeBtn() {
 
   return (
     <button
-      className="fixed z-10 bottom-6 text-4xl right-4 cursor-pointer"
+      className="fixed z-10 bottom-6 text-3xl md:text-4xl right-4 cursor-pointer"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       {theme==="light"?"🌙":"🔆"}

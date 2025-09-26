@@ -2,7 +2,7 @@ const textClass = "text-lg md:text-xl tracking-wide text-highlight";
 
 export const words = [
   {
-    text: "A passionate full stack developer",
+    text: "A full stack dev",
     className: textClass,
   },
 ];

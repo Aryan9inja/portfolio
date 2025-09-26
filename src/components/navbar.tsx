@@ -28,7 +28,7 @@ export default function Navbar() {
         shadow-lg
       "
     >
-      <ul className="flex justify-center gap-8 items-center">
+      <ul className="flex justify-center gap-3 md:gap-6 items-center">
         {navItems.map((navItem) => (
           <li key={navItem.id}>
             <Link
