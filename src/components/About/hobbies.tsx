@@ -7,12 +7,12 @@ export default function Hobbies() {
         </h1>
       </div>
 
-      <ul className="grid md:grid-cols-3 gap-6 text-center text-text/80">
+      <ul className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center text-text/80 text-xs md:text-base tracking-tighter">
         <li className="p-4 bg-bg-muted rounded-xl shadow-md hover:shadow-lg transition">
           Stargazing from the roof
         </li>
         <li className="p-4 bg-bg-muted rounded-xl shadow-md hover:shadow-lg transition">
-          Reading Space facts
+          Learn about new tech
         </li>
         <li className="p-4 bg-bg-muted rounded-xl shadow-md hover:shadow-lg transition">
           Travelling
@@ -24,7 +24,7 @@ export default function Hobbies() {
           Eating unhealty 😅
         </li>
         <li className="p-4 bg-bg-muted rounded-xl shadow-md hover:shadow-lg transition">
-          Learn about new tech
+          Reading Space facts
         </li>
       </ul>
     </section>
