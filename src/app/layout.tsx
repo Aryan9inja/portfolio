@@ -11,6 +11,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <title>Aryan's Portfolio</title>
+        <link rel="icon" href="/dev.png" type="image/png" />
+      </head>
       <body>
         <ThemeProvider
           attribute="class"
