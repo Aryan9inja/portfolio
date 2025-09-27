@@ -1,5 +1,6 @@
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { words, wordsB, wordsC } from "./words";
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -26,7 +27,7 @@ export default function Header() {
         />
       </div>
       <div className="hidden md:flex items-center justify-center">
-        <img src="/dev.png" alt="Aryan Avatar" className="rounded-full w-44 h-44 object-cover shadow-md border-4 border-accent" />
+        <Image src="/dev.png" alt="Aryan Avatar" className="rounded-full w-44 h-44 object-cover shadow-md border-4 border-accent" />
       </div>
     </header>
   );
