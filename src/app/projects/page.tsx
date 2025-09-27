@@ -1,4 +1,4 @@
-export default function About() {
+export default function Projects() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center">
       <div className="w-full max-w-4xl px-4 md:px-8 py-8 flex flex-col gap-10">
