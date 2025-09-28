@@ -29,12 +29,12 @@ const socials:Social[] = [
   {
     name: "Twitter",
     href: "https://x.com/Aryan_fullstack",
-    icon: ( <svg width={24} height={24} viewBox="0 0 24 24" className="fill-current text-foreground" aria-hidden="true"><path d={siInstagram.path} /></svg> ),
+    icon: ( <svg width={24} height={24} viewBox="0 0 24 24" className="fill-current text-foreground" aria-hidden="true"><path d={siX.path} /></svg> ),
     label: "Twitter profile"
   },{
     name:"Instagram",
     href:"https://www.instagram.com/ary._.an._/",
-    icon:(<svg width={24} height={24} viewBox="0 0 24 24" className="fill-current text-foreground" aria-hidden="true"><path d={siX.path} /></svg>),
+    icon:(<svg width={24} height={24} viewBox="0 0 24 24" className="fill-current text-foreground" aria-hidden="true"><path d={siInstagram.path} /></svg>),
     label:"Instagram profile"
   },
   {
