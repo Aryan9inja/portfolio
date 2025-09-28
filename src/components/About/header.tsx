@@ -4,10 +4,10 @@ export default function AboutHeader() {
   return (
     <header className="bg-bg-muted/80 rounded-2xl shadow-lg p-6 flex items-center justify-between gap-6">
       <div className="flex flex-col gap-1">
-        <h1 className="text-3xl md:text-5xl font-bold mb-1">
+        <h1 className="text-2xl md:text-5xl font-bold mb-1">
           Aryan Singh Thakur
         </h1>
-        <p className="text-lg md:text-xl text-text-muted">
+        <p className="text-base md:text-xl text-text-muted">
           Sunder Nagar, Himachal Pradesh, India
         </p>
       </div>
