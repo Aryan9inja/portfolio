@@ -8,8 +8,11 @@ export default function ProjectsPage() {
         <h1 className="text-4xl md:text-6xl font-bold text-center text-accent drop-shadow-lg mb-2 animate-fade-in">
           My Projects
         </h1>
-        <p className="text-lg md:text-2xl text-center text-text-muted mb-4 animate-fade-in">
+        <p className="text-lg md:text-2xl text-center text-text-muted animate-fade-in">
           Explore some of my favorite work, built with modern tech and a passion for solving real problems.
+        </p>
+        <p className="text-sm text-text-muted/80 text-center">
+          Tip: Click on a project to know more
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {Projects.map((project, idx) => (
@@ -22,6 +25,7 @@ export default function ProjectsPage() {
                 imageUrlLight={project.imageUrlLight}
                 name={project.name}
                 intro={project.intro}
+                slug={project.slug}
               />
             </div>
           ))}

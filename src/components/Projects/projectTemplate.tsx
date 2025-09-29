@@ -3,12 +3,14 @@
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export interface ProjectProps {
   imageUrldark: string;
   imageUrlLight: string;
   name: string;
   intro: string;
+  slug: string;
 }
 
 export default function ProjectTemplate({
@@ -16,24 +18,40 @@ export default function ProjectTemplate({
   imageUrlLight,
   name,
   intro,
+  slug,
 }: ProjectProps) {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const router = useRouter();
+
   useEffect(() => {
     setMounted(true);
   }, []);
   return (
-    <section className="rounded-3xl shadow-xl p-6 md:p-8 flex flex-col items-center gap-8 border border-border transition-all duration-300 hover:shadow-2xl hover:border-accent/60 cursor-pointer">
+    <section
+      onClick={() => router.push(`/projects/${slug}`)}
+      className="rounded-3xl shadow-xl p-6 md:p-8 flex flex-col items-center gap-8 border border-border transition-all duration-300 hover:shadow-2xl hover:border-accent/60 cursor-pointer"
+    >
       <div className="flex items-center justify-center mb-4 w-full relative aspect-[16/9]">
         {mounted ? (
-          <Image
-            src={resolvedTheme == "dark" ? imageUrldark : imageUrlLight}
-            alt="Project Screenshot"
-            fill
-            sizes="(max-width: 768px) 100vw, 640px"
-            className="object-cover shadow-lg border border-dashed border-accent/40 hover:border-accent transition duration-300 rounded-lg"
-            priority
-          />
+          <>
+            {!imageLoaded && (
+              <div className="w-full h-full bg-gray-200 dark:bg-gray-800 animate-pulse rounded-lg absolute inset-0 z-10 flex items-center justify-center">
+                <span className="loader border-4 border-accent border-t-transparent rounded-full w-10 h-10 animate-spin" />
+              </div>
+            )}
+            <Image
+              src={resolvedTheme == "dark" ? imageUrldark : imageUrlLight}
+              alt="Project Screenshot"
+              fill
+              sizes="(max-width: 768px) 100vw, 640px"
+              className="object-cover shadow-lg border border-dashed border-accent/40 hover:border-accent transition duration-300 rounded-lg"
+              priority
+              onLoad={() => setImageLoaded(true)}
+            />
+          </>
         ) : (
           <div className="w-full h-full bg-gray-200 dark:bg-gray-800 animate-pulse rounded-lg" />
         )}
