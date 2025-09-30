@@ -17,7 +17,9 @@ export const projectDetails: ProjectDetailsProps[] = [
             Focused on clean UI/UX and fast deployment with Appwrite backend.
           </li>
         </ul>
-        <div className="flex gap-4">
+        <div>
+          <h3 className="text-lg font-semibold text-highlight mb-2">Links for the project :</h3>
+          <div className="flex gap-4">
           <a
             href="https://github.com/Aryan9inja/AppwriteHackathonProject"
             target="_blank"
@@ -34,6 +36,7 @@ export const projectDetails: ProjectDetailsProps[] = [
           >
             Live Demo
           </a>
+          </div>
         </div>
       </div>
     ),
@@ -57,7 +60,9 @@ export const projectDetails: ProjectDetailsProps[] = [
             pipelines.
           </li>
         </ul>
-        <div className="flex gap-4">
+        <div>
+          <h3 className="text-lg font-semibold text-highlight mb-2">Links for the project :</h3>
+          <div className="flex gap-4">
           <a
             href="https://github.com/Aryan9inja/Synote-Frontend"
             target="_blank"
@@ -82,6 +87,7 @@ export const projectDetails: ProjectDetailsProps[] = [
           >
             Live
           </a>
+          </div>
         </div>
       </div>
     ),
@@ -106,7 +112,9 @@ export const projectDetails: ProjectDetailsProps[] = [
           </li>
           <li>Designed responsive, mobile-first UI using Tailwind CSS.</li>
         </ul>
-        <div className="flex gap-4">
+        <div>
+          <h3 className="text-lg font-semibold text-highlight mb-2">Links for the project :</h3>
+          <div className="flex gap-4">
           <a
             href="https://github.com/Aryan9inja/Shutr_Social-media-app"
             target="_blank"
@@ -131,6 +139,7 @@ export const projectDetails: ProjectDetailsProps[] = [
           >
             Live
           </a>
+          </div>
         </div>
       </div>
     ),
@@ -161,7 +170,9 @@ export const projectDetails: ProjectDetailsProps[] = [
             UX.
           </li>
         </ul>
-        <div className="flex gap-4">
+        <div>
+          <h3 className="text-lg font-semibold text-highlight mb-2">Links for the project :</h3>
+          <div className="flex gap-4">
           <a
             href="https://github.com/Aryan9inja/Flowceipt"
             target="_blank"
@@ -170,6 +181,7 @@ export const projectDetails: ProjectDetailsProps[] = [
           >
             Repo Link
           </a>
+          </div>
         </div>
       </div>
     ),
