@@ -15,8 +15,7 @@ export interface ProjectDetailsProps {
 }
 
 export default function Template(props: ProjectDetailsProps) {
-  const { title, description, imageDark, imageLight, technologies, link } =
-    props;
+  const { title, description, imageDark, imageLight, technologies, link } = props;
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -26,9 +25,15 @@ export default function Template(props: ProjectDetailsProps) {
   }, []);
 
   const image = mounted ? (resolvedTheme === "dark" ? imageDark : imageLight) : undefined;
+  const isLoading = !mounted || (image && !imageLoaded);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center">
+    <div className="min-h-screen flex flex-col items-center justify-center relative">
+      {isLoading && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-70">
+          <span className="loader border-4 border-accent border-t-transparent rounded-full w-16 h-16 animate-spin" />
+        </div>
+      )}
       <div className="w-full max-w-4xl px-4 md:px-8 py-8 flex flex-col gap-10">
         <section className="rounded-3xl shadow-xl p-6 md:p-8 flex flex-col items-center gap-8 cursor-pointer">
           {image && (
@@ -67,17 +72,6 @@ export default function Template(props: ProjectDetailsProps) {
                   </li>
                 ))}
               </ul>
-            )}
-            {link && (
-              <a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-4 px-5 py-2 rounded-lg bg-accent text-text-inverse font-semibold shadow hover:bg-accent-hover transition-colors focus:outline-none focus:ring-2 focus:ring-accent"
-                aria-label={`View ${title} project`}
-              >
-                View Project
-              </a>
             )}
           </div>
         </section>
