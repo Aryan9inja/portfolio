@@ -15,7 +15,7 @@ export interface ProjectDetailsProps {
 }
 
 export default function Template(props: ProjectDetailsProps) {
-  const { title, description, imageDark, imageLight, technologies, link } = props;
+  const { title, description, imageDark, imageLight, technologies } = props;
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
