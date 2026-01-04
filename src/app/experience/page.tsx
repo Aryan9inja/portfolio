@@ -1,5 +1,6 @@
 import Contributions from "@/components/Experience/contributions";
 import Internships from "@/components/Experience/internships";
+import Startups from "@/components/Experience/startup";
 import Head from "next/head";
 
 export default function Experience() {
@@ -28,6 +29,7 @@ export default function Experience() {
       <div className="min-h-screen flex flex-col items-center justify-center">
         <div className="w-full max-w-4xl px-4 md:px-8 py-8 flex flex-col gap-10">
           <Internships />
+          <Startups/>
           <Contributions />
         </div>
       </div>
