@@ -14,21 +14,18 @@ import {
   siNestjs,
   siExpress,
   siMongodb,
-  siMysql,
   siPostgresql,
-  siRedis,
   siReact,
   siNextdotjs,
   siTailwindcss,
   siHtml5,
   siCss,
-  siDocker,
+  siLinux,
   siNginx,
-  siVercel,
-  siAppwrite,
+  siAmazonwebservices,
   siGit,
   siGithub,
-  siLinux,
+  siPostman,
 } from "simple-icons";
 
 interface SkillItem {
@@ -57,11 +54,9 @@ const skillCategories: SkillCategory[] = [
     items: [
       { name: "Node.js", icon: siNodedotjs },
       { name: "NestJS", icon: siNestjs },
-      { name: "Express.js", icon: siExpress },
+      { name: "Express", icon: siExpress },
       { name: "MongoDB", icon: siMongodb },
-      { name: "MySQL", icon: siMysql },
       { name: "PostgreSQL", icon: siPostgresql },
-      { name: "Redis", icon: siRedis },
     ],
   },
   {
@@ -77,10 +72,9 @@ const skillCategories: SkillCategory[] = [
   {
     label: "Infrastructure",
     items: [
-      { name: "Docker", icon: siDocker },
+      { name: "Linux", icon: siLinux },
       { name: "NGINX", icon: siNginx },
-      { name: "Vercel", icon: siVercel },
-      { name: "Appwrite", icon: siAppwrite },
+      { name: "AWS", icon: siAmazonwebservices },
     ],
   },
   {
@@ -88,7 +82,7 @@ const skillCategories: SkillCategory[] = [
     items: [
       { name: "Git", icon: siGit },
       { name: "GitHub", icon: siGithub },
-      { name: "Linux", icon: siLinux },
+      { name: "Postman", icon: siPostman },
     ],
   },
 ];

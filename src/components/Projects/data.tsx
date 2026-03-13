@@ -7,24 +7,23 @@ export const projectDetails: ProjectDetailsProps[] = [
     description: (
       <div className="space-y-2">
         <p>
-          Low-level HTTP server built from scratch without frameworks to
-          understand how web servers work internally.
+          A high-performance HTTP/1.1 server implemented from scratch in C to
+          understand networking and protocol internals without relying on any
+          frameworks or libraries.
         </p>
         <ul className="list-disc list-inside space-y-1">
-          <li>Implemented TCP socket handling and HTTP request parsing manually.</li>
-          <li>Built routing, header parsing, and response generation from scratch.</li>
-          <li>
-            Explored networking concepts like request lifecycle, connection
-            handling, and protocol-level communication.
-          </li>
+          <li>Implemented TCP socket handling and event-driven concurrency using epoll.</li>
+          <li>Built manual HTTP request parsing for GET and POST methods.</li>
+          <li>Implemented header parsing, response generation, and static file serving.</li>
+          <li>Explored HTTP protocol internals and Linux systems programming.</li>
         </ul>
         <div>
           <h3 className="text-lg font-semibold text-highlight mb-2">
-            Links for the project :
+            Links
           </h3>
           <div className="flex gap-4">
             <a
-              href="https://github.com/Aryan9inja/raw-http-server"
+              href="https://github.com/Aryan9inja/raw-http-c"
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent hover:underline"
@@ -37,28 +36,181 @@ export const projectDetails: ProjectDetailsProps[] = [
     ),
     imageDark: "/projects/httpserver.png",
     imageLight: "/projects/httpserver_light.png",
-    technologies: ["C", "Sockets", "HTTP Protocol", "Systems Programming"],
+    technologies: ["C", "Linux", "Socket Programming", "epoll", "HTTP/1.1"],
     slug: "raw-http-server",
+  },
+
+  {
+    title: "Portly",
+    description: (
+      <div className="space-y-2">
+        <p>
+          An AI-powered platform that converts resumes into fully generated
+          developer portfolio websites automatically.
+        </p>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Automated resume parsing and structured data extraction from PDFs.</li>
+          <li>AI-driven portfolio content generation using OpenRouter LLMs.</li>
+          <li>Static site generation for customizable portfolio templates.</li>
+        </ul>
+        <div>
+          <h3 className="text-lg font-semibold text-highlight mb-2">
+            Links
+          </h3>
+          <div className="flex gap-4">
+            <a
+              href="https://github.com/Aryan9inja/AppwriteHackathonProject"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:underline"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://portly.appwrite.network"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:underline"
+            >
+              Live
+            </a>
+          </div>
+        </div>
+      </div>
+    ),
+    imageDark: "/projects/portly.png",
+    imageLight: "/projects/portly_light.png",
+    technologies: ["React", "Node.js", "OpenRouter LLMs", "PDF Parsing"],
+    slug: "portly",
+  },
+
+  {
+    title: "LexGenAI",
+    description: (
+      <div className="space-y-2">
+        <p>
+          A retrieval-augmented AI system designed to generate legal documents
+          for startups and small businesses with clause risk analysis.
+        </p>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Built a retrieval-based document generation pipeline using RAG architecture.</li>
+          <li>Implemented a clause risk analysis engine using LLM APIs.</li>
+          <li>Enabled exporting generated documents as PDFs.</li>
+          <li>Designed contextual generation using MongoDB retrieval pipelines.</li>
+        </ul>
+        <div>
+          <h3 className="text-lg font-semibold text-highlight mb-2">
+            Links
+          </h3>
+          <div className="flex gap-4">
+            <a
+              href="https://github.com/Aryan9inja/LexGenAI"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:underline"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    ),
+    imageDark: "/projects/LexGenAI.png",
+    imageLight: "/projects/LexGenAI.png",
+    technologies: ["RAG Architecture", "MongoDB", "LLM APIs", "Node.js"],
+    slug: "lexgenai",
+  },
+
+  {
+    title: "KrishiSetu",
+    description: (
+      <div className="space-y-2">
+        <p>
+          A voice-based AI system that enables farmers to access agricultural
+          guidance through phone calls using telephony integration and retrieval.
+        </p>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Built voice interaction through Twilio telephony integration.</li>
+          <li>Implemented BM25 retrieval engine for agricultural knowledge queries.</li>
+          <li>Designed for real-time query responses for non-technical rural users.</li>
+          <li>Integrated speech models for voice-to-text and text-to-speech.</li>
+        </ul>
+        <div>
+          <h3 className="text-lg font-semibold text-highlight mb-2">
+            Links
+          </h3>
+          <div className="flex gap-4">
+            <a
+              href="https://github.com/Aryan9inja/KrishiSetu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:underline"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    ),
+    imageDark: "/projects/krishiSetu.png",
+    imageLight: "/projects/krishiSetu.png",
+    technologies: ["Node.js", "Twilio", "BM25 Retrieval", "Speech Models"],
+    slug: "krishisetu",
+  },
+
+  {
+    title: "Flowceipt",
+    description: (
+      <div className="space-y-2">
+        <p>
+          A SaaS platform that automates receipt processing and expense tracking
+          with OCR and AI-powered financial data extraction.
+        </p>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Implemented OCR-based receipt parsing with GPT-powered structured data extraction.</li>
+          <li>Integrated Stripe subscriptions for secure billing and payment workflows.</li>
+          <li>Optimized database queries and backend architecture for efficient data retrieval.</li>
+        </ul>
+        <div>
+          <h3 className="text-lg font-semibold text-highlight mb-2">
+            Links
+          </h3>
+          <div className="flex gap-4">
+            <a
+              href="https://github.com/Aryan9inja/Flowceipt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:underline"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    ),
+    imageDark: "/projects/flowceipt.png",
+    imageLight: "/projects/flowceipt_light.png",
+    technologies: ["Node.js", "Express.js", "React", "Stripe", "OCR", "GPT API"],
+    slug: "flowceipt",
   },
 
   {
     title: "Synote",
     description: (
       <div className="space-y-2">
-        <p>AI-powered note-taking platform with intelligent summarization.</p>
+        <p>
+          A full-stack productivity platform for managing notes and tasks with
+          AI-assisted summarization.
+        </p>
         <ul className="list-disc list-inside space-y-1">
-          <li>Built secure REST APIs using Node.js, Express, and MongoDB.</li>
-          <li>
-            Integrated Mistral AI API to automatically generate concise note
-            summaries.
-          </li>
-          <li>
-            Deployed production-ready frontend on Vercel and backend on Render.
-          </li>
+          <li>Secure authentication with JWT and full CRUD for notes and tasks.</li>
+          <li>Rich text editor integration for a better writing experience.</li>
+          <li>AI-powered note summarization using Mistral AI API.</li>
+          <li>Frontend deployed on Vercel, backend deployed on Render.</li>
         </ul>
         <div>
           <h3 className="text-lg font-semibold text-highlight mb-2">
-            Links for the project :
+            Links
           </h3>
           <div className="flex gap-4">
             <a
@@ -96,28 +248,22 @@ export const projectDetails: ProjectDetailsProps[] = [
   },
 
   {
-    title: "Shutr (Social Media Platform)",
+    title: "Shutr",
     description: (
       <div className="space-y-2">
         <p>
-          Full-stack social media platform inspired by Instagram with real-time
-          chat functionality.
+          A full-stack social media platform with real-time communication
+          features and a microservice-style backend architecture.
         </p>
         <ul className="list-disc list-inside space-y-1">
-          <li>
-            Built real-time chat system using WebSockets supporting concurrent
-            users.
-          </li>
-          <li>
-            Implemented scalable backend services using NestJS architecture.
-          </li>
-          <li>
-            Designed responsive mobile-first interface using React and Tailwind.
-          </li>
+          <li>Built real-time chat using WebSockets supporting concurrent users.</li>
+          <li>Implemented media upload and post management features.</li>
+          <li>Designed responsive mobile-first UI with React and Tailwind.</li>
+          <li>Microservice-style backend with NestJS for scalable architecture.</li>
         </ul>
         <div>
           <h3 className="text-lg font-semibold text-highlight mb-2">
-            Links for the project :
+            Links
           </h3>
           <div className="flex gap-4">
             <a
@@ -152,179 +298,5 @@ export const projectDetails: ProjectDetailsProps[] = [
     imageLight: "/projects/shutr_light.png",
     technologies: ["React.js", "NestJS", "WebSockets", "Appwrite", "Tailwind CSS"],
     slug: "shutr",
-  },
-
-  {
-    title: "Flowceipt",
-    description: (
-      <div className="space-y-2">
-        <p>
-          SaaS platform for automated receipt management and expense tracking.
-        </p>
-        <ul className="list-disc list-inside space-y-1">
-          <li>
-            Implemented OCR-based receipt parsing with GPT-powered data
-            extraction.
-          </li>
-          <li>
-            Integrated Stripe subscriptions for secure billing and payment
-            workflows.
-          </li>
-          <li>
-            Optimized database queries and backend architecture for faster data
-            processing.
-          </li>
-        </ul>
-        <div>
-          <h3 className="text-lg font-semibold text-highlight mb-2">
-            Links for the project :
-          </h3>
-          <div className="flex gap-4">
-            <a
-              href="https://github.com/Aryan9inja/Flowceipt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:underline"
-            >
-              Repo
-            </a>
-          </div>
-        </div>
-      </div>
-    ),
-    imageDark: "/projects/flowceipt.png",
-    imageLight: "/projects/flowceipt_light.png",
-    technologies: ["Node.js", "Express.js", "React", "Stripe", "OCR", "GPT API"],
-    slug: "flowceipt",
-  },
-
-  {
-    title: "Portly",
-    description: (
-      <div className="space-y-2">
-        <p>
-          AI-powered portfolio generator that converts resumes into responsive
-          personal websites.
-        </p>
-        <ul className="list-disc list-inside space-y-1">
-          <li>Built modern UI using Next.js and Tailwind CSS.</li>
-          <li>
-            Integrated MetaAI API to automatically generate portfolio content.
-          </li>
-          <li>
-            Implemented backend services using Appwrite for authentication and
-            data storage.
-          </li>
-        </ul>
-        <div>
-          <h3 className="text-lg font-semibold text-highlight mb-2">
-            Links for the project :
-          </h3>
-          <div className="flex gap-4">
-            <a
-              href="https://github.com/Aryan9inja/AppwriteHackathonProject"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:underline"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://portly.appwrite.network"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:underline"
-            >
-              Live
-            </a>
-          </div>
-        </div>
-      </div>
-    ),
-    imageDark: "/projects/portly.png",
-    imageLight: "/projects/portly_light.png",
-    technologies: ["Next.js", "Appwrite", "Tailwind CSS", "MetaAI API"],
-    slug: "portly",
-  },
-
-  {
-    title: "LexGenAI",
-    description: (
-      <div className="space-y-2">
-        <p>
-          AI-powered platform that generates structured explanations and study
-          material from user prompts.
-        </p>
-        <ul className="list-disc list-inside space-y-1">
-          <li>Developed responsive UI using React and Tailwind CSS.</li>
-          <li>
-            Integrated language models to dynamically generate learning
-            content.
-          </li>
-          <li>
-            Designed modular architecture to support scalable AI-driven
-            knowledge tools.
-          </li>
-        </ul>
-        <div>
-          <h3 className="text-lg font-semibold text-highlight mb-2">
-            Links for the project :
-          </h3>
-          <div className="flex gap-4">
-            <a
-              href="https://github.com/Aryan9inja/LexGenAI"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:underline"
-            >
-              GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-    ),
-    imageDark: "/projects/lexgenai.png",
-    imageLight: "/projects/lexgenai_light.png",
-    technologies: ["React", "Node.js", "AI APIs", "Tailwind CSS"],
-    slug: "lexgenai",
-  },
-
-  {
-    title: "KrishiSetu",
-    description: (
-      <div className="space-y-2">
-        <p>
-          Agricultural information platform designed to help farmers access
-          crop prices and digital farming resources.
-        </p>
-        <ul className="list-disc list-inside space-y-1">
-          <li>Developed full-stack platform using React and Node.js.</li>
-          <li>Provided real-time crop pricing and agricultural insights.</li>
-          <li>
-            Focused on simple and accessible UX for rural and non-technical
-            users.
-          </li>
-        </ul>
-        <div>
-          <h3 className="text-lg font-semibold text-highlight mb-2">
-            Links for the project :
-          </h3>
-          <div className="flex gap-4">
-            <a
-              href="https://github.com/Aryan9inja/KrishiSetu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:underline"
-            >
-              GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-    ),
-    imageDark: "/projects/krishisetu.png",
-    imageLight: "/projects/krishisetu_light.png",
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    slug: "krishisetu",
   },
 ];

@@ -8,16 +8,16 @@ import { ExternalLink } from "lucide-react";
 
 const experiences = [
   {
-    title: "Full Stack Developer Intern",
+    title: "Full-Stack Developer Intern",
     company: "Svara AI",
     companyUrl: "https://www.linkedin.com/company/svaraai/",
-    period: "Oct 2025 - Mar 2026",
+    period: "Oct 2025 – Mar 2026",
     bullets: [
-      "Built backend services and REST APIs using Node.js, NestJS, and MySQL for a B2B SaaS campaign management platform.",
+      "Built backend services and REST APIs using Node.js and NestJS for a B2B SaaS campaign management platform.",
       "Developed frontend features using Next.js and Tailwind CSS.",
-      "Designed a production email infrastructure with Node.js inbound processing and Azure Email Services for outbound delivery.",
-      "Deployed and managed application infrastructure on AWS EC2 using NGINX reverse proxy.",
-      "Configured DNS authentication including SPF, DKIM, and DMARC for reliable email delivery.",
+      "Designed a production email infrastructure for inbound and outbound email workflows using Azure Email Services.",
+      "Deployed and managed services on AWS EC2 with NGINX reverse proxy.",
+      "Configured DNS authentication including SPF, DKIM, and DMARC for secure email delivery.",
     ],
   },
 ];
@@ -29,7 +29,7 @@ const openSourceContributions = [
     prUrl:
       "https://github.com/EbookFoundation/free-programming-books/pull/11449",
     description:
-      "Contributed documentation — added correct licensing to programming books and fixed the README.",
+      "Added correct licensing to programming books and fixed the README.",
   },
   {
     project: "RocketChat/fuselage",

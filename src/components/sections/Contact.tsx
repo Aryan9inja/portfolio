@@ -23,7 +23,7 @@ export default function Contact() {
           open.
         </p>
         <a
-          href="mailto:aryansingthakur@gmail.com"
+          href="mailto:aryansingh.fullstack@gmail.com"
           className="inline-block px-8 py-4 border border-accent text-accent rounded
                      font-roboto text-sm hover:bg-accent/10 transition-colors"
         >

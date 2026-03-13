@@ -26,22 +26,23 @@ export default function About() {
         className="space-y-4 text-text-muted text-base md:text-lg leading-relaxed max-w-2xl"
       >
         <motion.p variants={paraVariants}>
-          I&apos;m a Computer Science Engineering student at{" "}
-          <span className="text-accent">ICFAI University, Baddi</span> (CGPA: 8.9/10,
-          graduating 2027) passionate about building scalable applications and
-          understanding how systems work under the hood.
+          I&apos;m a software engineer and computer science student focused on backend
+          systems, networking, and AI-powered applications. My work spans from writing
+          networking systems in{" "}
+          <span className="text-accent">C</span> to building full-stack SaaS platforms
+          deployed in production.
         </motion.p>
         <motion.p variants={paraVariants}>
-          I&apos;ve had the opportunity to work at{" "}
-          <span className="text-accent">Svara AI</span> building B2B SaaS
-          infrastructure — from backend APIs with NestJS and MySQL, to production
-          email systems on AWS EC2 with NGINX.
+          I care about understanding how things work internally rather than only relying
+          on frameworks. This curiosity has led me to explore HTTP internals,
+          event-driven networking, retrieval systems, and AI-powered tools. I&apos;m
+          currently building B2B infrastructure at{" "}
+          <span className="text-accent">Svara AI</span>.
         </motion.p>
         <motion.p variants={paraVariants}>
-          My current interests revolve around backend engineering with Go and
-          Node.js, containerized deployments with Docker, and building developer
-          tools. I enjoy contributing to open source and exploring how databases
-          and operating systems work internally.
+          My long-term interests include distributed systems, operating systems, and
+          building intelligent developer infrastructure. I enjoy designing clean backend
+          architectures and experimenting with systems programming concepts.
         </motion.p>
       </motion.div>
     </Section>

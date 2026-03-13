@@ -40,14 +40,15 @@ export default function Hero() {
             variants={itemVariants}
             className="text-3xl md:text-5xl lg:text-6xl font-bold text-text-muted"
           >
-            I build things for the web.
+            I build systems and AI applications.
           </motion.h2>
           <motion.p
             variants={itemVariants}
             className="max-w-xl text-text-muted text-base md:text-lg leading-relaxed mt-2"
           >
-            I&apos;m a full stack developer and Computer Science student specializing in
-            building scalable web applications. Currently interning at{" "}
+            I&apos;m a software engineer and CS student focused on backend systems,
+            networking, and AI-powered applications. Currently building B2B SaaS
+            infrastructure at{" "}
             <a
               href="https://www.linkedin.com/company/svaraai/"
               target="_blank"
@@ -56,7 +57,7 @@ export default function Hero() {
             >
               Svara AI
             </a>
-            , working on B2B SaaS infrastructure with Node.js, NestJS, and AWS.
+            {" "}with Node.js, NestJS, and AWS.
           </motion.p>
           <motion.div
             variants={itemVariants}
