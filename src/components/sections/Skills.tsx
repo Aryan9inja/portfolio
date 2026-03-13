@@ -22,7 +22,6 @@ import {
   siCss,
   siLinux,
   siNginx,
-  siAmazonwebservices,
   siGit,
   siGithub,
   siPostman,
@@ -30,7 +29,7 @@ import {
 
 interface SkillItem {
   name: string;
-  icon: SimpleIcon;
+  icon?: SimpleIcon;
 }
 
 interface SkillCategory {
@@ -74,7 +73,7 @@ const skillCategories: SkillCategory[] = [
     items: [
       { name: "Linux", icon: siLinux },
       { name: "NGINX", icon: siNginx },
-      { name: "AWS", icon: siAmazonwebservices },
+      { name: "AWS EC2" },
     ],
   },
   {
@@ -137,7 +136,7 @@ export default function Skills() {
                              bg-bg-muted/60 rounded-lg border border-border hover:border-accent/40
                              hover:text-text transition-colors"
                 >
-                  <SkillIcon icon={skill.icon} />
+                  {skill.icon && <SkillIcon icon={skill.icon} />}
                   {skill.name}
                 </motion.span>
               ))}
