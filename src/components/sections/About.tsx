@@ -1,15 +1,16 @@
 "use client";
 
 import { motion } from "motion/react";
+import type { Variants } from "motion/react";
 import Section from "@/components/layout/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.14 } },
 };
 
-const paraVariants = {
+const paraVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };

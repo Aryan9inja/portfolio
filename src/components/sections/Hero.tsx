@@ -3,13 +3,14 @@
 import { motion } from "motion/react";
 import Container from "@/components/layout/Container";
 import { FileDown, Mail } from "lucide-react";
+import type { Variants } from "motion/react";
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
@@ -52,7 +53,7 @@ export default function Hero() {
             <a
               href="https://www.linkedin.com/company/svaraai/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener norzeferrer"
               className="text-accent hover:underline"
             >
               Svara AI
