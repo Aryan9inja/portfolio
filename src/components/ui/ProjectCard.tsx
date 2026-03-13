@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink, Github } from "lucide-react";
 import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
 interface ProjectCardProps {
   name: string;
@@ -49,7 +50,13 @@ export default function ProjectCard({
       } gap-6 md:gap-10 items-center`}
     >
       {/* Image */}
-      <div className="w-full md:w-[58%] shrink-0 relative aspect-[16/10] rounded-xl overflow-hidden bg-bg-muted">
+      <motion.div
+        initial={{ opacity: 0, x: reverse ? 50 : -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.65, ease: "easeOut" }}
+        className="w-full md:w-[58%] shrink-0 relative aspect-[16/10] rounded-xl overflow-hidden bg-bg-muted"
+      >
         <Link href={`/projects/${slug}`}>
           <div className="relative w-full h-full group">
             <Image
@@ -61,10 +68,16 @@ export default function ProjectCard({
             />
           </div>
         </Link>
-      </div>
+      </motion.div>
 
       {/* Content */}
-      <div className={`w-full md:w-[42%] ${reverse ? "md:text-right" : ""}`}>
+      <motion.div
+        initial={{ opacity: 0, x: reverse ? -50 : 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.65, ease: "easeOut", delay: 0.1 }}
+        className={`w-full md:w-[42%] ${reverse ? "md:text-right" : ""}`}
+      >
         <p className="font-roboto text-accent text-xs uppercase tracking-widest mb-2">
           Featured Project
         </p>
@@ -118,7 +131,7 @@ export default function ProjectCard({
             </a>
           )}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

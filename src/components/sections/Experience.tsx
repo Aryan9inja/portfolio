@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "motion/react";
 import Section from "@/components/layout/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ExperienceItem from "@/components/ui/ExperienceItem";
@@ -37,23 +40,53 @@ const openSourceContributions = [
   },
 ];
 
+const itemVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12 } },
+};
+
 export default function Experience() {
   return (
     <Section id="experience">
       <SectionHeading number="02" title="Experience" />
-      <div className="space-y-10">
+      <motion.div
+        variants={stagger}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-60px" }}
+        className="space-y-10"
+      >
         {experiences.map((exp, idx) => (
-          <ExperienceItem key={idx} {...exp} />
+          <motion.div key={idx} variants={itemVariants}>
+            <ExperienceItem {...exp} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       <div className="mt-14">
-        <h3 className="text-xl font-semibold text-text mb-6">
+        <motion.h3
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
+          className="text-xl font-semibold text-text mb-6"
+        >
           Open Source Contributions
-        </h3>
-        <div className="space-y-6">
+        </motion.h3>
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-40px" }}
+          className="space-y-6"
+        >
           {openSourceContributions.map((contrib, idx) => (
-            <div key={idx} className="group">
+            <motion.div key={idx} variants={itemVariants} className="group">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
                 <h4 className="text-base md:text-lg font-medium text-text">
                   {contrib.project}
@@ -79,9 +112,9 @@ export default function Experience() {
                 </span>
                 <span>{contrib.description}</span>
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </Section>
   );

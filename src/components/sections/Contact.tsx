@@ -1,9 +1,18 @@
+"use client";
+
+import { motion } from "motion/react";
 import Section from "@/components/layout/Section";
 
 export default function Contact() {
   return (
     <Section id="contact">
-      <div className="text-center max-w-lg mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 32 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="text-center max-w-lg mx-auto"
+      >
         <p className="font-roboto text-accent text-base mb-4">05. What&apos;s Next?</p>
         <h2 className="text-4xl md:text-5xl font-bold text-text mb-6">
           Get In Touch
@@ -20,7 +29,7 @@ export default function Contact() {
         >
           Say Hello
         </a>
-      </div>
+      </motion.div>
     </Section>
   );
 }

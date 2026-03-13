@@ -4,26 +4,48 @@ import { motion } from "motion/react";
 import Container from "@/components/layout/Container";
 import { FileDown, Mail } from "lucide-react";
 
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
 export default function Hero() {
   return (
     <section id="hero" className="min-h-screen flex items-center pt-14 lg:pt-0">
       <Container>
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
           className="flex flex-col gap-5"
         >
-          <p className="font-roboto text-accent text-base md:text-lg">
+          <motion.p
+            variants={itemVariants}
+            className="font-roboto text-accent text-base md:text-lg"
+          >
             Hi, my name is
-          </p>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-text">
+          </motion.p>
+          <motion.h1
+            variants={itemVariants}
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-text"
+          >
             Aryan Singh Thakur.
-          </h1>
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-text-muted">
+          </motion.h1>
+          <motion.h2
+            variants={itemVariants}
+            className="text-3xl md:text-5xl lg:text-6xl font-bold text-text-muted"
+          >
             I build things for the web.
-          </h2>
-          <p className="max-w-xl text-text-muted text-base md:text-lg leading-relaxed mt-2">
+          </motion.h2>
+          <motion.p
+            variants={itemVariants}
+            className="max-w-xl text-text-muted text-base md:text-lg leading-relaxed mt-2"
+          >
             I&apos;m a full stack developer and Computer Science student specializing in
             building scalable web applications. Currently interning at{" "}
             <a
@@ -35,8 +57,11 @@ export default function Hero() {
               Svara AI
             </a>
             , working on B2B SaaS infrastructure with Node.js, NestJS, and AWS.
-          </p>
-          <div className="flex flex-wrap gap-4 mt-4">
+          </motion.p>
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-wrap gap-4 mt-4"
+          >
             <a
               href="/resume.pdf"
               target="_blank"
@@ -55,7 +80,7 @@ export default function Hero() {
               <Mail size={16} />
               Get In Touch
             </a>
-          </div>
+          </motion.div>
         </motion.div>
       </Container>
     </section>
