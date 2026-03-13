@@ -1,8 +1,31 @@
-import Navbar from "@/components/navbar";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import ThemeBtn from "@/components/theme_button";
 import { StaticGridBackground } from "@/components/ui/grid-background-wrapper";
+import SectionNav from "@/components/layout/SectionNav";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Aryan Singh Thakur | Full Stack Developer",
+  description:
+    "Portfolio of Aryan Singh Thakur — full stack developer specializing in scalable web applications, backend engineering, and cloud infrastructure.",
+  keywords: [
+    "Aryan Singh Thakur",
+    "portfolio",
+    "full stack developer",
+    "web developer",
+    "backend engineer",
+  ],
+  authors: [{ name: "Aryan Singh Thakur" }],
+  openGraph: {
+    title: "Aryan Singh Thakur | Full Stack Developer",
+    description:
+      "Portfolio of Aryan Singh Thakur — full stack developer specializing in scalable web applications.",
+    type: "website",
+  },
+  icons: {
+    icon: "/dev.png",
+  },
+};
 
 export default function RootLayout({
   children,
@@ -11,11 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <title>Aryan&apos; Portfolio</title>
-        <link rel="icon" href="/dev.png" type="image/png" />
-      </head>
-      <body>
+      <body className="font-inter bg-bg text-text antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -24,9 +43,8 @@ export default function RootLayout({
         >
           <StaticGridBackground />
           <div className="relative z-10">
-            <Navbar />
-            <ThemeBtn />
-            <div className="mt-15">{children}</div>
+            <SectionNav />
+            {children}
           </div>
         </ThemeProvider>
       </body>
