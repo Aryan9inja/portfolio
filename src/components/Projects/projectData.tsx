@@ -23,7 +23,7 @@ export const Projects: ProjectProps[] = [
   },
   {
     imageUrldark: "/projects/portly.png",
-    imageUrlLight: "/projects/portly_light.png",
+    imageUrlLight: "/projects/portly.png",
     name: "Portly",
     intro: "AI-powered platform that converts resumes into fully generated developer portfolio websites",
     slug: "portly",
@@ -41,6 +41,7 @@ export const Projects: ProjectProps[] = [
     featured: true,
     technologies: ["RAG", "MongoDB", "LLM APIs", "Node.js"],
     githubUrl: "https://github.com/Aryan9inja/LexGenAI",
+    liveUrl: "https://lex-gen-ai.vercel.app/",
   },
   {
     imageUrldark: "/projects/krishiSetu.png",
@@ -50,7 +51,8 @@ export const Projects: ProjectProps[] = [
     slug: "krishisetu",
     featured: true,
     technologies: ["Node.js", "Twilio", "BM25 Retrieval", "Speech Models"],
-    githubUrl: "https://github.com/Aryan9inja/KrishiSetu",
+    githubUrl: "https://github.com/Aryan9inja/Krishi-Setu",
+    liveUrl:"https://youtu.be/o92L3jVlEbw",
   },
   {
     imageUrldark: "/projects/flowceipt.png",
