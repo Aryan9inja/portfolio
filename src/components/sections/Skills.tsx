@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import Section from "@/components/layout/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { SimpleIcon } from "simple-icons";
+import { SimpleIcon, siMysql } from "simple-icons";
 import {
   siC,
   siCplusplus,
@@ -45,7 +45,6 @@ const skillCategories: SkillCategory[] = [
       { name: "C++", icon: siCplusplus },
       { name: "JavaScript", icon: siJavascript },
       { name: "TypeScript", icon: siTypescript },
-      { name: "Go", icon: siGo },
     ],
   },
   {
@@ -55,6 +54,7 @@ const skillCategories: SkillCategory[] = [
       { name: "NestJS", icon: siNestjs },
       { name: "Express", icon: siExpress },
       { name: "MongoDB", icon: siMongodb },
+      { name: "MySQL", icon: siMysql },
       { name: "PostgreSQL", icon: siPostgresql },
     ],
   },
